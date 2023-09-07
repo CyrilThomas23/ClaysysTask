@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign Up</title>
+    <style>
+      body{
+        background-size: 100% 100%;
+        background-attachment: fixed;
+      }
+      div{
+        background-color: white;
+        width: 400px;
+        margin: auto;
+        margin-top: 50px;
+      }
+
+      .SignText{
+        height: 50px;
+        padding-top: 10px;
+        margin-top: 0px;
+        font-size: 30px;
+      }
+
+      input{
+        border:1px solid grey;
+        width: 300px;
+        height: 30px;
+        margin-bottom: 8px;
+      }
+
+      select{
+        width: 300px;
+        height: 30px;
+        color: grey;
+        margin-bottom: 10px;
+      }
+
+      textarea{
+        min-height: 50px;
+        min-width: 300px;
+      }
+      .dob{
+        color: grey;
+        font-size: 13px;
+        margin-bottom: 2px;
+        margin-top: 0px;
+      }
+      button{
+        width: 150px;
+        height: 40px;
+        font-weight: bold;
+        background-image: linear-gradient(to right,lightblue,lightgreen);
+        border: none;
+        font-size: 20px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body background="image/bg3.jpg">
+    <div>
+      <center>
+        <h1 class="SignText"><i>Sign Up for <span style="color: lightblue;">P</span>ics<SPAN style="color:lightgreen;">A</SPAN>rt</i></h1>
+        <form>
+          <input type="text" placeholder="First Name">
+          <br><br>
+          <input type="text" placeholder="Last Name">
+          <br><br>
+          <P class="dob">Date of Birth</P>
+          <input  type="date" placeholder="Date of Birth">
+          <br><br>
+          <input type="number" placeholder="Age">
+          <br><br>
+          <select id="Gender" class="Gend">
+            <option value="Choos">Gender</option>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+            <option value="O">Other</option>
+          </select>
+          <br><br>
+          <input type="number" placeholder="Phone Number">
+          <br><br>
+          <input type="email" placeholder="Email Address">
+          <br><br>
+          <textarea placeholder="Address"></textarea>
+          <br><br>
+          <select id="State">
+            <option value="S">State</option>
+          </select>
+          <br><br>
+          <select id="State">
+            <option value="S">City</option>
+          </select>
+          <br><br>
+          <input type="text" placeholder="Username">
+          <br><br>
+          <input type="password" placeholder="Password">
+          <br><br>
+          <input type="password" placeholder="Confirm Password">
+          <br><br>
+          <button>Sign up</button>
+          <br><br>
+        </form>
+      </center>
+    </div>
+  </body>
+</html>
