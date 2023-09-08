@@ -2,65 +2,37 @@
 <html>
   <head>
   <title>Login Portal</title>
-  <style>
-    .MainBox{
-      background-color: white;
-      margin: auto;
-      width: 400px;
-      margin-top: 150px;
-      height: 300px;
-      border:px solid;
-    }
-    .MainText{
-      margin-top: 10px;
-      color: black;
-      height: 50px;
-      padding-top: 10px;
-      margin-bottom: 10px;
+  <link rel="stylesheet"  href="css/login.css">
+
+  <script>
+    function validate(){
+      var EmailId =document.getElementById("Em");
+      var password = document.getElementById("Pa");
+
+      if(EmailId.value.trim() == "" && password.value.trim() == "" ){
+        document.getElementById("errorMessage").innerHTML = 
+        "Please enter the Email Id and password";
+        return false
+      }
+      else if(EmailId.value.trim() == ""){
+        document.getElementById("errorMessage").innerHTML = 
+        "Please enter the Email Id";
+        return false
+      }
+      else if(password.value.trim() == ""){
+        document.getElementById("errorMessage").innerHTML = 
+        "Please enter the Password";
+        return false
+      }
+      else{
+        return true;
+      }
+
     }
 
-    .Email{
-      display: block;
-      margin-bottom: 20px;
-      height: 25px;
-      width: 250px;
-      border-radius: 15px;
-      border: 1px solid grey;
-      padding-left: 10px;
-    }
+  </script>
 
-    .Pass{
-      display: block;
-      height: 25px;
-      width: 250px;
-      border-radius: 15px;
-      border: 1px solid grey;
-      padding-left: 10px;
-    }
 
-    .ButLogin{
-      width: 250px;
-      height: 30px;
-      font-size: 15px;
-      border-radius: 15px;
-      border: 1px solid rgb(255, 255, 255);
-      background-image: linear-gradient(to right,lightblue,lightgreen);
-      font-weight: bolder;
-    }
-
-    a{
-      text-decoration: none;
-      color: rgb(106, 106, 246);
-      
-    }
-
-    .ButLogin:hover{
-      cursor: pointer;
-      opacity: 0.5;
-    }
-
-    
-  </style>
   </head>
   <body background="image/bg3.jpg" style="background-size: 100% 100%;background-attachment: fixed;">
     <center>
@@ -69,16 +41,22 @@
           <h1 class="MainText"><i>Login to 
             <span style="color: lightblue;">P</span>ics<SPAN style="color:lightgreen;">A</SPAN>rt
           </i></h1>
-        
-        <input class="Email" placeholder="Email Address">
 
-        <input class="Pass"  placeholder="Password" type="password">
+
+        <form onsubmit="return validate()" action="Homepage.html">
+        <input id="Em" class="Email" placeholder="Email Address">
+
+        <input id="Pa" class="Pass"  placeholder="Password" type="password">
+
+        <p id="errorMessage" class="error"></p>
+        
         <p>
            <input type="checkbox">Remember me 
             <a href="" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Forgot password?</a>
       </p>
-        <button class="ButLogin">Login</button>
-        <p>Not a member? <a href="" target="_blank">Signup now</a></p>
+        <button class="ButLogin" type="submit">Login</button>
+        <p>Not a member? <a href="Signup.html" target="_blank">Signup now</a></p>
+      </form>
       </div>
     </center>
  

@@ -2,65 +2,49 @@
 <html>
   <head>
     <title>Sign Up</title>
-    <style>
-      body{
-        background-size: 100% 100%;
-        background-attachment: fixed;
-      }
-      div{
-        background-color: white;
-        width: 400px;
-        margin: auto;
-        margin-top: 50px;
-      }
+    <link rel="stylesheet" href="css/signup.css">
+    <script>
 
-      .SignText{
-        height: 50px;
-        padding-top: 10px;
-        margin-top: 0px;
-        font-size: 30px;
-      }
+function both(){
+  PhoneNumberValid();
+  EmailIdValidation()
 
-      input{
-        border:1px solid grey;
-        width: 300px;
-        height: 30px;
-        margin-bottom: 8px;
-      }
+}
 
-      select{
-        width: 300px;
-        height: 30px;
-        color: grey;
-        margin-bottom: 10px;
-      }
+      function PhoneNumberValid(){
+      var PhoneNumber = document.getElementById("PhoneNum").value;
+      var regExpPhone = /^[7-9]\d{9}$/;
 
-      textarea{
-        min-height: 50px;
-        min-width: 300px;
+      if(regExpPhone.test(PhoneNumber)){
       }
-      .dob{
-        color: grey;
-        font-size: 13px;
-        margin-bottom: 2px;
-        margin-top: 0px;
+      else{
+        document.getElementById("LabelPhone").style.visibility = "visible";
+        return false;
       }
-      button{
-        width: 150px;
-        height: 40px;
-        font-weight: bold;
-        background-image: linear-gradient(to right,lightblue,lightgreen);
-        border: none;
-        font-size: 20px;
-        border-radius: 10px;
+    }
+
+    function EmailIdValidation(){
+      var EmailId = document.getElementById("Email").value;
+      var regExpEmail = 
+      /([a-zA-Z0-9\.-]+)@([a-z0-9-]+).([a-z]{2,8})(.[a-z]{2,8})?/;
+
+      if(regExpEmail.test(EmailId)){
+        
       }
-    </style>
+      else{
+        document.getElementById("LabelEmail").style.visibility = "visible";
+        return false;
+      }
+      
+    }
+
+    </script>
   </head>
   <body background="image/bg3.jpg">
     <div>
       <center>
         <h1 class="SignText"><i>Sign Up for <span style="color: lightblue;">P</span>ics<SPAN style="color:lightgreen;">A</SPAN>rt</i></h1>
-        <form>
+        <form onsubmit="return both()">
           <input type="text" placeholder="First Name">
           <br><br>
           <input type="text" placeholder="Last Name">
@@ -76,10 +60,14 @@
             <option value="F">Female</option>
             <option value="O">Other</option>
           </select>
-          <br><br>
-          <input type="number" placeholder="Phone Number">
-          <br><br>
-          <input type="email" placeholder="Email Address">
+          <br>
+          <label id="LabelPhone" style="color: red;margin-right:175px ;font-size: 14px;visibility: hidden;">Phone number is invaid</label>
+          <br>
+          <input type="number" id="PhoneNum" placeholder="Phone Number">
+          <br>
+          <label id="LabelEmail" style="color: red;margin-right:175px ;font-size: 14px;visibility: hidden;">EmailId is invaid</label>
+          <br>
+          <input type="email" id="Email" placeholder="Email Address">
           <br><br>
           <textarea placeholder="Address"></textarea>
           <br><br>
@@ -97,7 +85,7 @@
           <br><br>
           <input type="password" placeholder="Confirm Password">
           <br><br>
-          <button>Sign up</button>
+          <button type="submit" >Sign up</button>
           <br><br>
         </form>
       </center>
