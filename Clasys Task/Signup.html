@@ -3,13 +3,9 @@
   <head>
     <title>Sign Up</title>
     <link rel="stylesheet" href="css/signup.css">
+    
+    <script src="cities.js"></script>
     <script>
-
-function both(){
-  PhoneNumberValid();
-  EmailIdValidation()
-
-}
 
       function PhoneNumberValid(){
       var PhoneNumber = document.getElementById("PhoneNum").value;
@@ -44,7 +40,7 @@ function both(){
     <div>
       <center>
         <h1 class="SignText"><i>Sign Up for <span style="color: lightblue;">P</span>ics<SPAN style="color:lightgreen;">A</SPAN>rt</i></h1>
-        <form onsubmit="return both()">
+        <form onsubmit="return PhoneNumberValid(), EmailIdValidation()" action="Homepage.html">
           <input type="text" placeholder="First Name">
           <br><br>
           <input type="text" placeholder="Last Name">
@@ -70,25 +66,27 @@ function both(){
           <input type="email" id="Email" placeholder="Email Address">
           <br><br>
           <textarea placeholder="Address"></textarea>
-          <br><br>
-          <select id="State">
-            <option value="S">State</option>
-          </select>
-          <br><br>
-          <select id="State">
-            <option value="S">City</option>
-          </select>
+          <br><br>        
+            <select onchange="print_city('state', this.selectedIndex);" id="sts" name ="stt" class="form-control" required></select>
+            <select id ="state" class="form-control" required></select>
+            <script language="javascript">print_state("sts");</script>
+          
           <br><br>
           <input type="text" placeholder="Username">
           <br><br>
           <input type="password" placeholder="Password">
           <br><br>
           <input type="password" placeholder="Confirm Password">
-          <br><br>
+          <br>
+          <p style="font-size: 14px;">By creating an account you agree to our <a href="#" style="color:dodgerblue;font-size: 14px;">Terms & Privacy</a>.</p>
+          <br>
           <button type="submit" >Sign up</button>
-          <br><br>
+          <br>
+          <p>Already a member?<a href="login.html" style="color:dodgerblue">Login</a>.</p>
+          <br>
         </form>
       </center>
     </div>
   </body>
 </html>
+

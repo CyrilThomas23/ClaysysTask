@@ -5,6 +5,25 @@
       Contact us
     </title>
     <link rel="stylesheet" href="css/contact.css">
+    <script>
+
+   
+function validate(){
+  var EmailCont = document.getElementById("EmailContact").value;
+  var regularExp = 
+  /([a-zA-Z0-9\.-]+)@([a-z0-9-]+).([a-z]{2,8})(.[a-z]{2,8})?/;
+
+  
+  if(regularExp.test(EmailCont)){
+    
+  }
+  else{
+    document.getElementById("EmailLabel").style.visibility = "visible";
+    return false;
+  }
+  }
+
+    </script>
   </head>
  
   <body background="image/bg5.jpg">
@@ -13,15 +32,23 @@
         <h1><i>Contact
           <span style="color: lightblue;">P</span>ics<SPAN style="color:lightgreen;">A</SPAN>rt
         </i></h1>
+        <form onsubmit="return validate()">
       <br>
-      <input type="text" placeholder="Name">
+      <input type="text" id="NameContact" placeholder="Name">
       <br>
-      <input type="email" placeholder="Email ID">
-      <BR>
-      <textarea placeholder="Enter the Message"></textarea>
+      <label id="EmailLabel" class="LabelEmail">Email ID invalid</label>
+      <br>
+      <input type="email" id="EmailContact" placeholder="Email ID">
+      <BR><br>
+      <textarea id="MessageContact" placeholder="Enter the Message"></textarea>
+      <br>
       <br>
       <button>Send</button>
+    </form>
+    <BR>
+    <a class="back" href="Homepage.html">Back to Homepage</a>
     </center>
+  
     </div>
   </body>
 </html>

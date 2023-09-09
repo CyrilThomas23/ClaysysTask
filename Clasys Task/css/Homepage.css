@@ -1,0 +1,133 @@
+.headBar{
+  position: sticky;
+  top: 0;      display: grid;
+  grid-template-columns: 1000px 110px 110px 110px 120px;
+  align-items: center;
+  background-color: white;
+  margin-bottom: 20px;
+  z-index: 99;/*greater the z-index it will in front*/
+  
+}
+.SiteName{
+  font-size: 40px;
+  font-weight: bolder;
+  margin-right: 200px;
+}
+
+.search{
+  margin-top: 20px;
+  width: 500px;
+  height: 30px;
+  border: 2px solid;
+}
+
+.searchButton{
+  
+  border: 2px solid ;
+  height: 35px;
+  width: 60px;
+  font-weight: bolder;
+  margin-right: 4px;
+}
+
+a{
+  margin-right: 20px;
+  margin-left: 20px;
+  text-decoration: none;
+  color: black;
+}
+body{
+  background-color: azure;
+  
+}
+  .statement{
+    font-size: 25px;
+    text-align: center;
+
+  }
+.Images{
+  width: 1300px;
+  height: 600px;
+  display: block;
+  margin-left: 120px;
+  margin-right: 50px;
+  margin-top: 50px;
+
+}
+
+#slider{
+      overflow: hidden;
+    }
+
+    #slider figure{
+      position: relative;
+      width: 500%;
+      margin: 0;
+      left: 0;
+      animation: 10s slider infinite;
+    }
+    
+    #slider figure img{
+      width: 20%;
+      float: left;
+    }
+
+    @keyframes slider{
+      0%{left:0}
+      20%{left: 0;}
+      25% {left: -100%;}
+      45%{left: -100%}
+      50%{left: -200%;}
+      70%{left: -200%;}
+      75%{left: -300%;}
+      95%{left: -300%;}
+      100%{left: -400%;}
+    }
+    .foot{
+      display: inline;
+    }
+
+    .footer {
+     position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 100px 100px 100px 900px 100px 100px 100px;
+      }
+
+      .logo{
+        height: 30px;
+        margin-top: 10px;
+      }
+
+      .Upload{
+        margin-top: 20px;
+        height: 50px;
+        width: 250px;
+        border-radius: 50px;
+        background-image: linear-gradient(to right,lightblue,lightgreen);
+        font-size: 20px;
+        border: none;
+        box-shadow: 5px 5px 5px 5px rgba(50, 50,50,0.5);
+        font-weight: bolder;
+      }
+
+      .Upload:hover{
+        cursor: pointer;
+        opacity: 0.5;
+      }
+
+      .Gallery{
+        margin-left: 80px;
+        margin-top: 50px;
+
+      }
+      .PhotoGalText{
+        font-weight: bolder;
+        font-size: 50px;
+        margin-bottom: 0px;
+      }

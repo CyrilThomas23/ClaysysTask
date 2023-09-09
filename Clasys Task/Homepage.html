@@ -4,46 +4,79 @@
     <title>
       Home Page
     </title>
+   <link rel="stylesheet" href="css/Homepage.css">
+
   </head>
-  <style>
-    .headBar{
-      display: grid;
-      grid-template-columns: 1000px 100px 100px 100px 100px;
-      align-items: center;
-      background-color: white;
-    }
-    .SiteName{
-      font-size: 40px;
-      font-weight: bolder;
-      margin-right: 200px;
-    }
-
-    a{
-      margin-right: 20px;
-      text-decoration: none;
-      color: black;
-    }
-    body{
-      background-color: aliceblue;
-      
-    }
-
-
-  </style>
-  <body>
+ 
+  <body style="height: 1700px;">
     <div class="headBar">
       <label class="SiteName"><i>
         <span style="color: lightblue;"> P</span>ics<SPAN style="color:lightgreen;">A</SPAN>rt
       </i>
       </label>
-      <a href="http://127.0.0.1:5500/login.html" target="_blank">Login</a>
+      <a href="login.html"><b>Login</b></a>
       
-      <a href>Signup</a>
+      <a href="Signup.html"><b>Signup</b></a>
       
-      <a href>About us</a>
+      <a href="AboutUs.html"><b>About us</b></a>
       
-      <a href>Contact us</a>
+      <a href="contactus.html"><b>Contact us</b></a>
     </div>
+    <p class="statement"><i><b>Join the PicsArt community,home to tens of billions of photos and groups</b></i></p>
+    
+    <div id="slider">
+      <figure>
+        <img src="image/1.jpg">
+        
+        <img src="image/2.jpg">
+        
+        <img src="image/3.jpg">
+        
+        <img src="image/4.jpg">
+        
+        <img src="image/1.jpg">
+      </figure>
+
+    </div>
+    <center>
+      <button class="Upload">
+        Upload Photo
+      </button>
+      <br><br><br>
+        <input class="search" placeholder="Search for Images" ><button class="searchButton">Search</button>
+           
+      <br><br>
+      <p class="PhotoGalText">Photo Gallery</p>
+    </center>
+    
+    <br>
+    <div>
+    <img class="Gallery"src="gallery/g1.jpg" width="400px">
+    
+    <img class="Gallery" src="gallery/g2.jpg" width="400px">
+    <img class="Gallery" src="gallery/g4.jpg" width="400px">
+    <img class="Gallery" src="gallery/g5.jpg" width="400px">
+    <img class="Gallery" src="gallery/g7.jpg" width="400px">
+    <img class="Gallery" src="gallery/g8.jpg" width="400px">
+  </div>
+   <div class="footer">
+   
+    <p class="foot">Privacy</p>
+    <p class="foot">Terms</p>
+    <P class="foot">Help forum</P>
+    <p class="foot" style="width: 800px;">Connecting people throgh Photography</p>
+    <img class="logo" src="image/insta.png" style="object-position: center;">
+    
+    <img class="logo" src="image/face.png" style="object-position: center;">
+    
+    <img class="logo" src="image/twit.png" style="object-position: center;">
+
+
+   </div>
+ 
+    
+   
+     
     
 
   </body>

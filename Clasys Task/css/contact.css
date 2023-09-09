@@ -6,7 +6,7 @@ div{
   margin: auto;
   background-color: white;
   width: 400px;
-  height: 400px;
+  height: 450px;
   margin-top: 150px;
 }
 
@@ -19,14 +19,34 @@ button{
   background-image: linear-gradient(to right,lightblue,lightgreen);
   border: none;
   width: 200px;
-  margin-top: 50px;
+  margin-top: 0px;
   height: 30px;
   border-radius: 20px;
   font-weight: bolder;
   font-size: 15px;
+
 }
 
 textarea{
   min-width: 300px;
   min-height: 100px;
+}
+
+.LabelEmail{
+color: red;
+margin-right: 220px;
+font-size: 13px;
+visibility: hidden;
+}
+
+p{
+  font-size: 14px;
+  color: red;
+}
+
+.back{
+  color: blue;
+  text-decoration: none;
+  font-size: small;
+
 }

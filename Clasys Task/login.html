@@ -6,17 +6,17 @@
 
   <script>
     function validate(){
-      var EmailId =document.getElementById("Em");
+      var Username =document.getElementById("Em");
       var password = document.getElementById("Pa");
 
-      if(EmailId.value.trim() == "" && password.value.trim() == "" ){
+      if(Username.value.trim() == "" && password.value.trim() == "" ){
         document.getElementById("errorMessage").innerHTML = 
-        "Please enter the Email Id and password";
+        "Please enter the Username and password";
         return false
       }
-      else if(EmailId.value.trim() == ""){
+      else if(Username.value.trim() == ""){
         document.getElementById("errorMessage").innerHTML = 
-        "Please enter the Email Id";
+        "Please enter the Username";
         return false
       }
       else if(password.value.trim() == ""){
@@ -44,7 +44,7 @@
 
 
         <form onsubmit="return validate()" action="Homepage.html">
-        <input id="Em" class="Email" placeholder="Email Address">
+        <input id="Em" class="User" placeholder="Username">
 
         <input id="Pa" class="Pass"  placeholder="Password" type="password">
 
